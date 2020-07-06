@@ -27,10 +27,15 @@
       </div>
     </div>
     <div id="right">
-      You’ve used 815 GB of your storage
-      185 GB Left
-      0 GB
-      1000 GB
+      <p>You’ve used <span>815 GB</span> of your storage</p>
+      <div class="slidecontainer">
+        <input type="range" min="1" max="1000" value="815" class="slider" id="myRange">
+      </div>
+      <p id="min">0 GB</p>
+      <p id="max">1000 GB</p>
+      <div class="bubble">
+        <p><span id="GB">185</span> GB LEFT</p>
+      </div>
     </div>
   </div>
   <div class="attribution">

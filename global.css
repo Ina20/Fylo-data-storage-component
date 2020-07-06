@@ -1,7 +1,7 @@
 body {
   background: url(./images/bg-desktop.png) no-repeat fixed bottom , hsl(229, 57%, 11%);
   background-size: 100% 50%;
-  color: #fff;
+  color: hsl(243, 100%, 93%);
   font-family: 'Raleway', sans-serif;
   font-size: 14px;
 }
@@ -17,19 +17,47 @@ body {
   flex-direction: column;
   background: hsl(228, 56%, 26%);
   height: 175px;
-  width: 30%;
-  margin-right: 30px;
+  width: 27%;
+  margin-right: 25px;
   border-radius: 10px 100px 10px 10px;
 }
 #right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background: hsl(228, 56%, 26%);
-  height: 130px;
-  width: 50%;
-  margin-top: 50px;
+  height: 120px;
+  width: 47%;
+  margin-top: 55px;
   border-radius: 10px;
+}
+#right p {
+  padding: 5px 0 0 30px;
+}
+.slidecontainer {
+  width: 100%;
+  padding: 0 0 0 30px;
+}
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 85%;
+  height: 20px;
+  background: hsl(229, 57%, 11%);
+  border-radius: 10px;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+.slider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+}
+input[type="range"]::-moz-range-progress {
+  height: 80%;
+  border-radius: 10px;
+  background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
 }
 #logo {
   height: 35px;
@@ -47,4 +75,62 @@ body {
   width: 20px;
   padding: 10px;
   background: hsl(229, 57%, 11%);
+}
+span {
+  font-weight: 700;
+}
+.bubble {
+   position: relative;
+
+   line-height: 35px;
+   bottom: 120px;
+   left: 50%;
+   width: 140px;
+   height: 50px;
+   padding: 0px;
+   background: hsl(243, 100%, 93%);
+   -webkit-border-radius: 10px 10px 0 10px;
+   -moz-border-radius: 10px 10px 0 10px;
+   border-radius: 10px 10px 0 10px;
+   color: #000;
+   display: table;
+}
+.bubble:after
+{
+  content: '';
+	position: absolute;
+	bottom: 10px;
+	left: 127px;
+	width: 0;
+	height: 0;
+	border: 25px solid transparent;
+	border-top-color: hsl(243, 100%, 93%);
+	border-bottom: 0px;
+	border-right: 0px;
+	margin-left: -12.5px;
+	margin-bottom: -25px;
+}
+#GB {
+  font-size: 26px;
+  color: #000;
+}
+.bubble p {
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: hsl(229, 7%, 55%);
+  display: table-cell;
+  vertical-align: middle;
+  text-align: left;
+}
+#min {
+  display: inline-flex;
+  float: left;
+  margin: 0;
+  font-weight: 700;
+}
+#max {
+  display: inline-flex;
+  float: right;
+  margin: 0 10% 0 0;
+  font-weight: 700;
 }
